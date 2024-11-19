@@ -1,40 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# HERE Maps Boilerplate with Next.js
 
-## Getting Started
+This project is a simple setup for integrating HERE Maps into a Next.js application.
 
-First, run the development server:
+## Steps to Set Up the Project
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Follow these steps to create and configure your Next.js project with HERE Maps.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 1. Create a New Next.js Project
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- Run `npx create-next-app@latest projectName` in your terminal.
+- When prompted, select "Yes" to use the `src` folder.
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+### 2. Clean Up Unnecessary Files
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+- Remove the default content from `src/pages/index.js`.
+- Delete any unused CSS files, like `src/styles/Home.module.css` and other default styles.
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 3. Set Up the Project Structure
 
-## Learn More
+- Inside the `src` folder, create a new folder named `components`.
+- In the `components` folder, create a file named `Map.js`.
 
-To learn more about Next.js, take a look at the following resources:
+### 4. Write the Map Component
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+- Implement the `Map.js` file to initialize and render the HERE Map.
+- Make sure to follow the HERE Maps documentation for proper configuration.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 5. Import and Use the Map Component
 
-## Deploy on Vercel
+- Open `src/pages/index.js`.
+- Import and use the `Map` component in the main page component.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 6. Add HERE Maps API Scripts
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+- Open `src/pages/_document.js`.
+- Add the necessary HERE Maps API scripts inside the `<Head>` section.
+
+### 7. Get Your HERE API Key
+
+- Visit the [HERE Developer Portal](https://developer.here.com) to sign up and get your API key.
+- Replace the placeholder API key in your code with the one you obtained from the portal.
+
+### 8. Customize the Map
+
+- Adjust the map settings (like zoom level and coordinates) as needed.
+- Refer to the [HERE Maps API Documentation](https://developer.here.com/documentation) for customization options.
+
+## Useful Links
+
+- [HERE Developer Portal](https://developer.here.com) - Sign up and get your API key.
+- [HERE Maps API Documentation](https://developer.here.com/documentation) - Detailed documentation for the HERE Maps API.
+
+---
+
+This `README.md` provides a clear set of steps for setting up and understanding the project. Feel free to customize and expand on it as needed!
