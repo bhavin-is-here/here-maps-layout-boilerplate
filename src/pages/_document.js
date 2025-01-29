@@ -38,16 +38,6 @@ export default function Document() {
           defer
           >
           </script>
-          <script  
-          src="https://js.api.here.com/v3/3.1/mapsjs-clustering.js"
-          type="text/javascript"
-          
-          defer
-          >
-          </script>
-
-          
-
       </Head>
       <body>
         <Main />
